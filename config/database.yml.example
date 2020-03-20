@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: 151190
+
+development:
+  <<: *default
+  database: care4luggage_development
+
+test: &test
+  <<: *default
+  database: care4luggage_test
+
+production:
+  <<: *default
+  database: care4luggage_produc
